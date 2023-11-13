@@ -1,11 +1,11 @@
 from ma import *
-from mb import B
+from mb import B, Second
+
 
 
 def test():
     a = A()
     b = B(5)
-
     assert(a.i == 3)
     assert(a.fnc(2) == 2 * 2 * 3)
     assert(b.fnc(10, 4) == 10 * 4 * 5)
@@ -13,7 +13,6 @@ def test():
     assert(a.isSecond == 0)
     assert(b.isFirst() == 0)
     assert(b.isSecond == 1)
-
     assert(isinstance(a, First))
     assert(isinstance(b, Second))
     assert(isinstance(a, Parent))
